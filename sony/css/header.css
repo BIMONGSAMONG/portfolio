@@ -1,0 +1,200 @@
+.logo {
+    width: 308px;
+    height: 53px;
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+    margin: 30px 75px;
+    float: left;
+}
+#header-container.theme-transparent .logo{
+    -webkit-filter: none;
+    filter: none;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+}
+
+
+header>nav {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom, var(--color-main), var(--color-main-a));
+    z-index: 9999;
+
+    overflow: hidden;
+
+    transition: all 0.3s;
+}
+#header-container.theme-transparent > header > nav{
+    background: var(--color-sub);
+}
+
+
+header>nav:has(.navP:hover) {
+    background: var(--color-sub);
+    height: 800px;
+}
+
+header>nav:has(.navAS:hover) {
+    background: var(--color-sub);
+    height: 450px;
+}
+
+header>nav:has(.navP:hover) .top_nav,
+header>nav:has(.navAS:hover) .top_nav,
+header>nav:has(.navP:hover) .top_nav > li > a,
+header>nav:has(.navAS:hover) .top_nav > li > a{
+    color: var(--color-main);
+}
+
+header>nav:has(.navP:hover) .logo,
+header>nav:has(.navAS:hover) .logo {
+    -webkit-filter: none;
+    filter: none;
+}
+
+
+
+.top_nav ,
+.top_nav > li > a{
+    font: var(--text-main);
+    color: var(--color-sub);
+    height: 100%;
+}
+
+#header-container.theme-transparent .top_nav,
+#header-container.theme-transparent .top_nav > li >a{
+    color: var(--color-main);
+}
+
+.top_nav>li {
+    float: left;
+    line-height: 110px;
+    margin: 0 25px;
+    cursor: pointer;
+}
+
+.top_nav>.navP>ul {
+    position: absolute;
+    padding-top: 20px;
+    left: 75px;
+    width: calc(100% - 150px);
+    height: 657px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 580px);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.top_nav>.navP:hover>ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+.navP>ul>li {
+    width: 560px;
+    height: 280px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.top_nav>.navAS>ul {
+    position: absolute;
+    padding-top: 50px;
+    left: 75px;
+    width: calc(100% - 150px);
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.top_nav>.navAS:hover>ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+.top_nav>.navAS>ul>li {
+    font: var(--text-main);
+    margin-bottom: 50px;
+}
+
+.top_nav>.navAS>ul>li>a {
+    color: var(--color-main);
+}
+.top_nav>.navAS>ul>li>a:hover {
+    color: var(--color-gray);
+}
+
+.top_nav .texts {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 150px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.top_nav .texts>h1,
+.top_nav .texts>h3 {
+    color: var(--color-sub);
+}
+
+
+.tab-label {
+    cursor: pointer;
+    position: static !important;
+}
+
+.tab-label>video {
+    width: 560px;
+    height: 280px;
+    object-fit: cover;
+
+    filter: brightness(0.5);
+    transition: all 0.3s ease;
+}
+.tab-label>video:hover{
+    filter: brightness(0.75);
+}
+
+input[name="p-tab"] {
+    display: none;
+}
+
+input[name="p-tab"]:checked ~ .subNav {
+    opacity: 1;
+    visibility: visible;
+}
+
+input[name="p-tab"]:checked ~ .tab-label video {
+    filter: brightness(1);
+}
+
+.subNav{
+    position: absolute;
+    top: 20px;
+    left: 1200px;
+    width: 100%;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    font: var(--text-main);
+}
+
+.subNav > li {
+    margin-bottom: 40px;
+}
+
+.subNav a {color: var(--color-main);}
+.subNav a:hover{color: var(--color-gray);}

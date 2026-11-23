@@ -1,0 +1,283 @@
+#deco {
+    font: 100 96px/normal 'Pretendard', sans-serif;
+}
+
+
+main {
+    min-width: 1280px;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+
+    height: 100vh; 
+    
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover; 
+    z-index: -1;
+}
+
+.banner > .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* 투명도 40%의 까만 막 (글씨가 하얀색일 때 필수!) */
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 2;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 50px; /* 바닥에서 50px 띄움 */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* 글씨와 화살표 사이 간격 */
+}
+
+
+.scroll-down .text {
+    color: rgba(255, 255, 255, 0.7);
+    font: 400 14px/1 'Pretendard', sans-serif;
+    letter-spacing: 3px;
+}
+
+.scroll-down .arrow {
+    width: 16px;
+    height: 16px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+    border-right:  2px solid rgba(255, 255, 255, 0.7);
+    
+    transform: rotate(45deg); 
+
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: rotate(45deg) translate(0, 0);
+    }
+    50% {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+}
+
+.logos {
+    position: absolute;
+    width: 1185px;
+    height: 78px;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logos>img {
+    padding-left: 93px;
+}
+
+.logos>img:first-child {
+    padding-left: 0;
+}
+
+
+.nowSony {
+    width: var(--min-width);
+    height: 1080px;
+    margin: 150px auto;
+}
+
+.nowSony>.contents-1 {
+    float: left;
+    width: calc(var(--col-width) * 6 + var(--gutter) * 5);
+    height: 580px;
+    margin-right: var(--gutter);
+}
+
+.nowSony>.contents-2 {
+    float: left;
+    width: calc(var(--col-width) * 6 + var(--gutter) * 5);
+}
+
+.nowSony>.contents-2>.text {
+    float: left;
+    width: calc(var(--col-width) * 3 + var(--gutter) * 2);
+    margin-right: var(--gutter);
+}
+
+.nowSony>.contents-2>img {
+    width: calc(var(--col-width) * 3 + var(--gutter) * 2);
+}
+
+.nowSony>.contents-3 {
+    float: left;
+    margin-top: 40px;
+    width: calc(var(--col-width) * 6 + var(--gutter) * 5);
+}
+
+.nowSony>.contents-4 {
+    float: left;
+    margin-top: -410px;
+    width: calc(var(--col-width) * 6 + var(--gutter) * 5);
+    height: 410px;
+
+}
+
+.nowSony>.contents-1>a,
+.nowSony>.contents-3>a {
+    display: block;
+    overflow: hidden;
+}
+
+.nowSony>.contents-1>a>img,
+.nowSony>.contents-3>a>img {
+    transition: all 0.3s;
+
+}
+
+.nowSony>.contents-1>a:hover>img,
+.nowSony>.contents-3>a:hover>img {
+    transform: scale(1.1, 1.1);
+    filter: brightness(0.8);
+}
+
+
+.whatsHot {
+    width: 100%;
+    height: 1080px;
+    background-color: var(--color-main);
+    margin: 150px 0;
+}
+
+.whatsHot h1 {
+    color: var(--color-sub);
+
+}
+
+.whatsHot h3 {
+    color: var(--color-sub);
+}
+
+.whatsHot p {
+    color: var(--color-lightGray);
+}
+
+.whatsHot>.wrapper {
+    width: var(--min-width);
+    margin: 120px auto;
+    padding-top: 100px;
+    position: relative;
+}
+
+.whatsHot>.wrapper>h1 {
+    margin-bottom: 20px;
+}
+
+
+.whatsHot>.wrapper>.contents-1 {
+    position: relative;
+}
+
+.whatsHot>.wrapper>.contents-1>img:nth-child(3) {
+    position: absolute;
+}
+
+.whatsHot>.wrapper>.contents-1>img:nth-child(4) {
+    margin-left: calc(var(--gutter) + var(--col-width));
+    margin-top: 60px;
+}
+
+.whatsHot>.wrapper>.contents-2 {
+    position: absolute;
+    margin-left: var(--gutter);
+}
+
+.whatsHot>.wrapper>.contents-2>img {
+    rotate: 8deg;
+}
+
+.whatsHot>.wrapper>.contents-3 {
+    position: absolute;
+    top: 95%;
+    left: 52%;
+    transform: translateX(-50%);
+}
+
+.whatsHot>.wrapper>.contents-3>img {
+    rotate: -8deg;
+}
+
+.whatsHot>.wrapper>.contents-3 h3,
+.whatsHot>.wrapper>.contents-3 p {
+    text-align: center;
+}
+
+.whatsHot>.wrapper>.contents-4 {
+    position: absolute;
+    left: 68%;
+    top: 65%;
+    text-align: right;
+}
+
+.whatsHot>.wrapper>.contents-4 h3,
+.whatsHot>.wrapper>.contents-4 p {
+    margin-right: 130px;
+}
+
+.whatsHot>.wrapper>.contents-4>img {
+    rotate: 5deg;
+}
+
+.aboutSony {
+    width: var(--min-width);
+    margin: 150px auto;
+}
+
+.aboutSony>.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: var(--gutter);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.aboutSony>.wrapper>article:nth-child(2),
+.aboutSony>.wrapper>article:nth-child(5),
+.aboutSony>.wrapper>article:nth-child(7) {
+    border: 2px solid var(--color-lightGray);
+    text-align: center;
+    display: grid;
+    place-content: center;
+
+    position: relative;
+}
+
+
+.aboutSony>.wrapper>article:nth-child(2)::after,
+.aboutSony>.wrapper>article:nth-child(5)::after,
+.aboutSony>.wrapper>article:nth-child(7)::after {
+    content: '+';
+    position: absolute;
+    right: 15px;
+
+    color: var(--color-gray);
+    font: 200 50px/normal 'Pretendard', sans-serif;
+}

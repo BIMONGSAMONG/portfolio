@@ -1,0 +1,118 @@
+main>.banner {
+    width: 100%;
+    position: relative;
+}
+
+.banner>h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: var(--color-sub);
+    font-size: 50px;
+}
+
+.banner>img {
+    width: 100%;
+    display: block;
+}
+
+main>.middle {
+    width: var(--min-width);
+    display: flex;
+    gap: var(--gutters);
+
+    margin: 0 auto;
+
+    align-items: flex-start;
+}
+
+.middle>.left {
+    width: calc(var(--col-width) * 8 + var(--gutter) * 7);
+    border: 1px solid var(--color-gray);
+
+    padding: 10px 20px;
+    margin: 20px;
+}
+
+.left>.list {
+    display: flex;
+    gap: 10px;
+    position: relative;
+
+    margin-top: 40px;
+}
+
+.left>.list::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background-color: var(--color-gray);
+}
+
+.list>.icon {
+    width: 150px;
+    height: 140px;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.list>.icon>img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.list>.icon>.btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 110px;
+    font: var(--text-small);
+    line-height: 40px;
+}
+
+.list>.textbox {
+    width: 665px;
+    margin-top: 10px;
+}
+
+.list>.textbox>h3 {
+    margin-bottom: 10px;
+}
+
+.list>.textbox>ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.middle>.right {
+    width: calc(var(--col-width) * 4 + var(--gutter) * 3);
+    border: 1px solid var(--color-gray);
+
+    padding: 10px 20px;
+    margin: 20px;
+
+    
+}
+
+.left > .list:nth-child(4)>.icon>img {
+    background-color: #1AB9B1;
+    padding: 18px 18px 18px 20px;
+}
+
+.left > .list:nth-child(5)>.icon>img {
+    background-color: #BFE7FF;
+    padding: 14px 20px;
+}
+
+.right>img{
+    margin-top: 20px;
+    padding: -10px -20px;
+}

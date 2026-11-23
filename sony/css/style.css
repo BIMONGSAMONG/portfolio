@@ -1,0 +1,20 @@
+:root{
+    --color-main: #121212;
+    --color-main-a: #12121200;
+    --color-sub: #fff;
+    --color-lightGray: #f5f5f5;
+    --color-gray: #C0C0C0;
+    --color-darkGray: #2A2A2A;
+    --color-green: #028E42;
+
+    --text-main: 700 28px/normal 'Pretendard', sans-serif;
+    --text-sub: 600 18px/normal 'Pretendard', sans-serif;
+    --text-contents: 400 16px/1.4 'Pretendard', sans-serif;
+    --text-contents-B: 700 16px/1.4 'Pretendard', sans-serif;
+    --text-small: 400 14px/1.5 'Pretendard', sans-serif;
+    --text-small-B: 400 14px/1.5% 'Pretendard', sans-serif;
+
+    --col-width: 85px;
+    --gutter: 20px;
+    --min-width: 1260px;
+}

@@ -1,0 +1,215 @@
+
+
+main > .banner{
+    width: 100%;
+    position: relative;
+}
+
+.banner > h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: var(--color-sub);
+    font-size: 50px;
+}
+
+.banner > img{
+    width: 100%;
+    display: block;
+}
+
+main > .middle{
+    width: var(--min-width);
+    display: flex;
+    gap: var(--gutters);
+    
+    margin: 0 auto;
+}
+
+.middle > .left{
+    width: calc(var(--col-width) * 8 + var(--gutter) * 7);
+    border: 1px solid var(--color-gray);
+
+    padding: 10px 20px;
+    margin: 20px;
+}
+.middle > .right{
+    width: calc(var(--col-width) * 4 + var(--gutter) * 3);
+}
+
+input[name="l-tab"] {
+    display: none;
+}
+
+input[name="l-tab"]:checked~.contentsWrapper {
+    grid-template-rows: 1fr;
+}
+
+
+.tab>li .contentsWrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: all 0.3s;
+}
+
+.tab>li .contents {
+    overflow: hidden;
+}
+
+.contents>p{
+    position: relative;
+    padding-left: 15px;
+    margin: 15px 60px;
+    font: var(--text-contents);
+}
+.contents> p::before{
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-main);
+}
+.contents >li{
+    margin: 20px 50px;
+    font: var(--text-contents);
+}
+
+.tab>li>label {
+    display: inline-block;
+    width: 100%;
+    margin: 15px 15px;
+    position: relative !important;
+    font: var(--text-sub);
+
+    transition: all 0.3s;
+}
+
+.tab>li>label::before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-gray);
+
+    bottom: -10px;
+    left: 0;
+    width: 90%;
+    height: 2px;
+}
+
+.tab>li>label::after {
+    content: ">";
+    position: absolute;
+
+    color: var(--color-gray);
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    font: 200 30px/1.4 'Pretendard', sans-serif;
+}
+
+input[name="l-tab"]:checked+label::after {
+    transform: translateY(-50%) rotate(270deg);
+}
+
+.middle > .right{
+    width: calc(var(--col-width) * 4 + var(--gutter) * 3);
+    border: 1px solid var(--color-gray);
+
+    padding: 10px 20px;
+    margin: 20px;
+}
+
+.right > .list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gutter);
+    margin-top: var(--gutter);
+    text-align: center;
+}
+
+.list > li{
+    margin: 10px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center; 
+    gap: 10px;  
+    
+    width: 320px; 
+    margin: 20px auto;
+}
+
+
+.search-input {
+    flex: 1;
+    height: 40px;
+    padding: 0 15px;
+    
+    border: 1px solid var(--color-gray);
+    outline: none;
+    
+    font: var(--text-contents);
+    font-size: 16px;
+    color: #333;
+    
+    transition: border-color 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: var(--color-gray);
+}
+
+.search-input:focus {
+    border-color: var(--color-main); 
+}
+
+.search-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    
+    background-color: var(--color-main); 
+    border: none;
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: background-color 0.2s ease;
+}
+
+
+.search-btn:hover {
+    background-color: var(--color-darkGray);
+}
+
+main > .bottom{
+    width: 100%;
+    height: 180px;
+    background-color: var(--color-lightGray);
+}
+
+.bottom > .wrapper{
+    width: var(--min-width);
+    margin: 50px auto;
+    display: flex;
+    gap:calc(var(--col-width) + var(--gutter) *2);
+}
+
+.wrapper> .button{
+    display: flex;
+    gap: 20px;
+
+    width: calc(var(--col-width) * 4 + var(--gutter) * 3);
+    margin-top: 50px;
+    margin-left: 20px;
+
+    position: relative;
+}
+
+.button>img{
+    background-color: var(--color-main);
+    padding: 10px;
+}

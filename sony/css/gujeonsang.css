@@ -1,0 +1,126 @@
+:root {
+    --main-blue: #70b0d9;
+    --dark-blue: #4a8db7;
+    --bg-color: #f8fbfe;
+    --card-bg: #ffffff;
+    --text-main: #333333;
+    --text-sub: #666666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.main-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #222;
+}
+
+/* Grid Layout */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid #e1e9f0;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.project-name {
+    color: var(--text-sub);
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    padding: 12px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn.primary {
+    background-color: var(--main-blue);
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: var(--dark-blue);
+}
+
+.btn.outline {
+    border: 1.5px solid var(--main-blue);
+    color: var(--main-blue);
+}
+
+.btn.outline:hover {
+    background-color: #f0f7ff;
+}
+
+footer {
+    margin-top: auto;
+    padding-top: 60px;
+    color: var(--text-sub);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: var(--font-size);
+}
+
+
+.hero { background-color: #f0f4f7; }
+.benefits { background-color: #ffffff; }
+.welcome { background-color: #e8f5e9; }
+
+
+h1 {font: var(--text-h1); letter-spacing: -5%;}
+h2 {font: var(--text-h2);letter-spacing: -5%;}
+h3 {font: var(--text-h3);letter-spacing: -5%;}
+h4 {font: var(--text-h4);}
+p {font: var(--text-p);}
+small {font: var(--text-small);}
+
+.btn {
+    margin-top: 10px;
+
+    text-align: center;
+
+    padding: .5em 2em;
+
+    border: none;
+    border-radius: 50px;
+
+    cursor: pointer;
+}
+
+.text-green {
+    color: var(--color-green-dark);
+}
+
+.text-sky {
+    color: var(--color-sky-dark);
+}
+
+.text-blue{
+    color: var(--color-blue-dark);
+}
+
+.text-purple {
+    color: var(--color-purple);
+}
+
+.text-red {
+    color: var(--color-red);
+}
+
+.text-darkGray {
+    color: var(--color-darkGray);
+}
+
+.bg-green {
+    background-color: var(--color-green-dark);
+    color: var(--color-white);
+}
+
+.bg-sky {
+    background-color: var(--color-sky-dark);
+    color: var(--color-white);
+}
+
+.bg-blue{
+    background-color: var(--color-blue-dark);
+    color: var(--color-white);
+}
+
+.bg-purple {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+}
+
+.bg-lightGray {
+    background-color: var(--color-lightGray);
+}
+
+.bg-darkGray{
+    background-color: var(--color-darkGray);
+    color: var(--color-white);
+}
+
+.border-green {
+    border: 3px solid var(--color-green-dark);
+}
+
+.border-sky {
+    border: 3px solid var(--color-sky-dark);
+}
+
+.border-blue{
+    border: 3px solid var(--color-blue-dark);
+}
+
+.border-purple {
+    border: 3px solid var(--color-purple);
+}
+
+.border-gray {
+    border: 1px solid var(--color-lightGray);
+}
+
+
+
+@media (max-width: 767px) {
+    body, html{
+        font-size: var(--font-size);
+    }
+}

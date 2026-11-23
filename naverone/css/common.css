@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.woff2);
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.woff2);
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff2);
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.woff2);
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.woff2);
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.woff2);
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff2);
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff2);
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.woff2);
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.woff2);
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.woff2);
+    font-weight: 900;
+    font-display: swap;
+}
+
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+:root{
+    --color-black: #101720;
+    --color-darkGray: #b1b1b1;
+    --color-lightGray: #efefef;
+    --color-white: #fff;
+    --color-red:#ff4e51;
+
+    --color-green: #03f05a;
+    --color-green-dark:#03c85a;
+    --color-sky:#1ebaf5;
+    --color-sky-dark:#1e9bf5;
+    --color-blue:#5090f1;
+    --color-blue-dark:#505fdc;
+    --color-purple:#a477f4;
+    --color-pink:#dc7da9;
+
+    --font-size: 16px;
+    --text-h1: 900 1.5rem/150% 'NanumSquareNeo', sans-serif;
+    --text-h2: 500 1.3rem/150% 'nanumgothic', sans-serif;
+    --text-h3: 900 1.25rem/135% 'NanumSquareNeo', sans-serif;
+    --text-h4: 600 1.125rem/normal 'nanumgothic', sans-serif;
+    --text-p: 400 1rem/150% 'nanumgothic', sans-serif;
+    --text-p-bold: 600 1rem/150% 'nanumgothic', sans-serif;
+    --text-small: 400 .875rem/150% 'nanumgothic', sans-serif;
+    --text-small-bold: 600 .875rem/150% 'nanumgothic', sans-serif;
+
+    --container-width: 1200px;
+    --grid-cols: 12;
+    --grid-gutter: 24px;
+    --grid-col-width: 78px;
+    --grid-offset: auto;
+}
+
+@media (max-width: 767px) {
+    :root {
+        --font-size: 14px;
+        --grid-cols: 6;
+        --grid-gutter: 16px;
+        --grid-col-width: 40px;
+        --grid-offset: 20px;
+        --container-width: 100%;
+    }
+}

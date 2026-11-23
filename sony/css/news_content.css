@@ -1,0 +1,119 @@
+main{
+    width: var(--min-width);
+    margin: 120px auto;
+}
+.title{
+    width: var(--min-width);
+    margin: 0 auto 100px;
+
+    text-align: center;
+    position: relative;
+}
+.title> h1{
+    margin-bottom: 20px;
+}
+.title > small,
+.title > h3{
+    color: var(--color-gray);
+}
+.title> .sns{
+    float: right;
+}
+.title::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+
+    background-color: var(--color-gray);
+
+    bottom: -50px;
+    left: 0;
+}
+
+.contents > .subtext{
+    width: 800px;
+    margin: 0 auto 20px;
+    list-style: circle;
+    padding-left: 20px; 
+}
+
+.contents > .texts{
+    display: flex;
+    gap: var(--gutter);
+}
+
+.texts > .left{
+    width: calc(var(--col-width) * 9 + var(--gutter) * 8);
+}
+.texts >.left > .text{
+    width: 720px;
+    margin: 40px auto;
+}
+.texts >.left >.text >li{
+    margin-bottom: 20px;
+}
+
+.texts >.left > img{
+    display: block;
+    margin: auto;
+}
+.texts >.left > small{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: var(--color-gray);
+}
+
+.texts>.right {
+    width: calc(var(--col-width) * 3 + var(--gutter) *2);
+    height: 630px;
+
+    border: 1px solid var(--color-gray);
+}
+.texts > .right > h1{
+    margin-left: 25px;
+}
+
+
+.texts > .right > .content{
+    display: flex;
+    gap: 5px;
+    position: relative;
+
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.texts > .right > .content:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    background-color: var(--color-gray);
+    width: 90%;
+    height: 2px;
+
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.right > .content > .textbox{
+    margin: 10px 15px;
+}
+.right > .content > img{
+    width: 100px;
+    height: 100px;
+
+    margin-right: 10px;
+}
+
+.bottom{
+    width: var(--min-width);
+    position: relative;
+}
+
+.bottom>.btn{
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+}
